@@ -17,38 +17,38 @@
                 <dt>#{compD.greeting()}</dt>
             </dl>
             <dl>
-                <dt><b>Transactions</b></dt>
-                <dd><p>#{firstComp.sayHello()}</p></dd>
+                <!--<dt><b>Transactions</b></dt>-->
+                <!--<dd><p>#{firstComp.sayHello()}</p></dd>-->
 
-                <dt><b>Request type use-case example:</b></dt>
+                <dt><b>Use case'ai:</b></dt>
                 <dd>
                     <p>
-                        <h:link outcome="simple-usecase-jpa">Create new course and student (DAO with JPA)</h:link><br/>
-                        <h:link outcome="simple-usecase-mybatis">Create new course and student (DAO with MyBatis)</h:link>
+                        <h:link outcome="simple-usecase-jpa">Sukurti studentą ir kursą naudojant JPA</h:link><br/>
+                        <h:link outcome="simple-usecase-mybatis">Sukurti studentą ir kursą naudojant MyBatis</h:link>
                     </p>
                 </dd>
 
-                <dt><b>Conversation type use-case example:</b></dt>
+                <dt><b>Use case'as su dialogu:</b></dt>
                 <dd>
                     <p>
-                        <h:link outcome="conversation-cdi">Example with CDI - Jei naudojate TomEE, pridėkite Hibernate biblioteką (žr. aukščiau)</h:link><br/>
-                        Papildoma medžiaga: <h:link outcome="conversation-ejb">Example with EJB</h:link>
+                        <h:link outcome="conversation-cdi">Sukurti studentą ir kursą naudojant CDI</h:link><br/>
+                        Papildoma medžiaga: <h:link outcome="conversation-ejb">Pavyzdys su EJB</h:link>
                     </p>
                 </dd>
 
-                <dt><b>Asynchronous calls</b></dt>
+                <dt><b>Asinchroninis uzklausos siuntimas</b></dt>
                 <dd><p>#{compA.callAsyncMethod()}</p></dd>
 
-                <dt><b>OptimisticLockException handling</b></dt>
-                <dd><p><h:link outcome="editStudent">Edit Student</h:link></p></dd>
+                <dt><b>Modifikavimas, OptimisticLocking</b></dt>
+                <dd><p><h:link outcome="editStudent">Keisti studento duomenis</h:link></p></dd>
 
                 <dt><b>Security</b></dt>
                 <dd>
-                    Konfigūracija:
-                    <ol>
-                        <li>Failą /login.config nukopijuokite į {TomEE-install-dir}/conf/</li>
-                        <li>Failą /setenv.bat nukopijuokite į {TomEE-install-dir}/bin/</li>
-                    </ol>
+                    <!--Konfigūracija:-->
+                    <!--<ol>-->
+                        <!--<li>Failą /login.config nukopijuokite į {TomEE-install-dir}/conf/</li>-->
+                        <!--<li>Failą /setenv.bat nukopijuokite į {TomEE-install-dir}/bin/</li>-->
+                    <!--</ol>-->
                     <p:panel id="zona1" header="Testuojam metodų apsaugą" style="width: 40em">
                         Rezultatas: <b>#{secureBean.result}</b> <br/>
                         <p:commandButton value="Tik prisijungusiems"
@@ -57,7 +57,7 @@
                         <p:commandButton value="Tik adminams"
                                          actionListener="#{secureBean.tikAdminams}"
                                          update="zona1"/>
-                        <p:commandButton value="Create entity."
+                        <p:commandButton value="Sukurti esybę"
                                          actionListener="#{requestComponent.createEntity}"
                                          update="zona1"/>
                     </p:panel>

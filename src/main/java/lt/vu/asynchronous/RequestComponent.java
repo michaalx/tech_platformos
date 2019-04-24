@@ -1,6 +1,6 @@
 package lt.vu.asynchronous;
 
-import lt.vu.entities.ExtracurriculumActivity;
+//import lt.vu.entities.ExtracurriculumActivity;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
@@ -38,10 +38,6 @@ public class RequestComponent {
 
     @Transactional
     public void createEntity() {
-        ExtracurriculumActivity newEntity = new ExtracurriculumActivity();
-        newEntity.setId(25);
 
-        em.persist(newEntity);
-        em.flush();
     }
 }
