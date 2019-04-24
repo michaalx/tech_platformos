@@ -12,13 +12,13 @@ public class Authorizer {
     private AuthenticatedUserHolder authenticatedUserHolder;
 
     @Secures
-    @UserLoggedInArbaRagai
+    @UserLoggedInValidity
     public boolean tikrinamArPrisijunges() throws Exception {
         return authenticatedUserHolder.isAuthenticated();
     }
 
     @Secures
-    @AdministratorArbaKrantai
+    @AdministratorValidity
     public boolean tikrinamArAdminas() throws Exception {
         return authenticatedUserHolder.isAdmin();
     }

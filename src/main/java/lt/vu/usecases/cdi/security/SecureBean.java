@@ -1,8 +1,8 @@
 package lt.vu.usecases.cdi.security;
 
 import lombok.Getter;
-import lt.vu.auth.AdministratorArbaKrantai;
-import lt.vu.auth.UserLoggedInArbaRagai;
+import lt.vu.auth.AdministratorValidity;
+import lt.vu.auth.UserLoggedInValidity;
 
 import javax.enterprise.inject.Model;
 
@@ -12,12 +12,12 @@ public class SecureBean {
     @Getter
     private String result = "Press the button!!!";
 
-    @UserLoggedInArbaRagai
+    @UserLoggedInValidity
     public void tikPrisijungusiems() {
         result = "Buvo iškviestas metodas skirtas tik prisijungusiems.";
     }
 
-    @AdministratorArbaKrantai
+    @AdministratorValidity
     public void tikAdminams() {
         result = "Buvo iškviestas metodas skirtas tik adminams.";
     }

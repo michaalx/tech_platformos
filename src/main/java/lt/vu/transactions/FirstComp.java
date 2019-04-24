@@ -33,8 +33,8 @@ public class FirstComp {
 
     @Transactional(Transactional.TxType.REQUIRED)
     public String sayHello() {
-        return toString() + " | " + new Date() + " | " + " Tx: " + tx.getTransactionKey() +
-                " | Second component: " + secondComp.sayHello();
+        return toString() + " " + new Date() + " " + " Tx: " + tx.getTransactionKey() +
+                " Second component: " + secondComp.sayHello();
     }
 
 }

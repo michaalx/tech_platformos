@@ -40,7 +40,7 @@ public class RequestUseCaseControllerJPA {
         course.getStudentList().add(student);
         courseDAO.create(course);
         studentDAO.create(student);
-        log.info("Maybe OK...");
+        log.info("Student and course have been created...");
     }
 
     private void loadAllStudents() {

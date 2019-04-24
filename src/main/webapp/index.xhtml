@@ -10,9 +10,12 @@
 <h:head/>
 <h:body>
     <ui:composition template="/WEB-INF/templates/mainLayout.xhtml">
-        <ui:param name="pageName" value="Laboratory classes for the 1st assignment"/>
+        <ui:param name="pageName" value="Pirmasis laboratorinis darbas."/>
 
         <ui:define name="content">
+            <dl>
+                <dt>#{compD.greeting()}</dt>
+            </dl>
             <dl>
                 <dt><b>Transactions</b></dt>
                 <dd><p>#{firstComp.sayHello()}</p></dd>
@@ -53,6 +56,9 @@
                                          update="zona1"/>
                         <p:commandButton value="Tik adminams"
                                          actionListener="#{secureBean.tikAdminams}"
+                                         update="zona1"/>
+                        <p:commandButton value="Create entity."
+                                         actionListener="#{requestComponent.createEntity}"
                                          update="zona1"/>
                     </p:panel>
                 </dd>
